@@ -20,6 +20,7 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
+		\Log::info('This is some useful information.');
 		return view('welcome');
 	}
 
