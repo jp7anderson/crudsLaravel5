@@ -1,6 +1,6 @@
 <?php
 
-// Logging
+// Logging Teste
 
 $monolog = Log::getMonolog();
 $syslog = new \Monolog\Handler\SyslogHandler('papertrail');
