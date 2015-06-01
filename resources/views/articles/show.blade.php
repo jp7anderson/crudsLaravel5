@@ -14,4 +14,6 @@
 			@endforeach
 		</ul>
 	@endunless
+
+	<a class="btn btn-default" href="{{ url('/articles/'.$article->id.'/edit') }}">Edit</a>
 @stop

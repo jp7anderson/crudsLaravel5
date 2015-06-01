@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -14,6 +13,8 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::resource('articles', 'ArticlesController');
+
+Route::get('tags', 'TagsController@index');
 
 Route::get('tags/{tags}', 'TagsController@show');
 

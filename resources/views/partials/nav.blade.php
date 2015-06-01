@@ -7,15 +7,20 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">Blog</a>
+			<a class="navbar-brand" href="/articles">Articles</a>
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="/articles">Articles</a></li>
+				<li><a href="/tags">Tags</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
-				<li>{!! link_to_action('ArticlesController@show', $latest->title, [$latest->id]) !!}</li>
+				<li>{!! link_to_action('ArticlesController@show', 'Last Article: '.$latest->title, [$latest->id]) !!}</li>
+				@if (Auth::user())
+					<li><a href="/auth/logout">Logout</a></li>
+				@else
+					<li><a href="/auth/login">Sign-in</a></li>
+				@endif
 			</ul>			
 		</div><!--/.nav-collapse -->
 	</div>
